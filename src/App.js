@@ -20,6 +20,7 @@ import Topbar from "./components/topbar/Topbar";
 import { AuthContext } from "./context/authContext";
 import Sidefeed from "./pages/sidefeed/Sidefeed";
 import Success from "./pages/success/Success";
+import Sideprofile from "./pages/sideprofile/Sideprofile";
 
 
 function App() {
@@ -74,6 +75,10 @@ function App() {
         {
           path: "/success",
           element: <Success/>,
+        },
+        {
+          path: "/sideprofile",
+          element: <Sideprofile/>,
         }
       ]
     },

@@ -14,9 +14,11 @@ export default function Sidebar() {
                 <ul className="sidebarList">
                 <li className="sidebarListItem">
                 <img src={currentUser.profilePic} alt="" className="sidebarUserImg" />
+                        <Link to ="/sideprofile" style={{textDecoration:"none"}}>
                         <span className="sidebarListItemTextUser">
                             {currentUser.name}
                         </span>
+                        </Link>
                      
                     </li>
                     <li className="sidebarListItem">
