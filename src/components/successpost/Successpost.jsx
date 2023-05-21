@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "./post.css"
+import "./successpost.css"
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import TextsmsIcon from '@mui/icons-material/Textsms';
@@ -10,11 +10,11 @@ import { useState } from "react";
 
 
 
-const Post = ({post}) => {
+const Successpost = ({post}) => {
   
-  const [commentOpen, setCommentOpen] = useState(false)  
+//   const [commentOpen, setCommentOpen] = useState(false)  
   
-  const liked = true;
+//   const liked = true;
     
     return (
     <div className="post">
@@ -36,19 +36,19 @@ const Post = ({post}) => {
         <img className="postImg" src={post.img} alt="" />
       </div>
       <div className="info">
-        <div className="reaction">
+        {/* <div className="reaction">
             {liked ? <FavoriteIcon htmlColor="tomato"/> : <FavoriteBorderIcon/>}
             12 liked
         </div>
         <div className="reaction" onClick={()=> setCommentOpen(!commentOpen)}>
             <TextsmsIcon/>
             2 comments 
-        </div>
+        </div> */}
       </div>
-      {commentOpen && <Comments/>}
+      {/* {commentOpen && <Comments/>} */}
      </div>
     </div>
   )
 }
 
-export default Post
+export default Successpost

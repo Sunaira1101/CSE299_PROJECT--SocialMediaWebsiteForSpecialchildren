@@ -3,6 +3,7 @@ import { AuthContext } from "../../context/authContext";
 import "./sidebar.css";
 import {QuestionAnswer, Slideshow, AutoStories, CalendarMonth, Mood, SportsEsports, LocalLibrary, Work} from '@mui/icons-material';
 import { Link } from "react-router-dom";
+import Post from "../post/Post";
 
 export default function Sidebar() {
     const { currentUser } = useContext(AuthContext);
@@ -16,6 +17,7 @@ export default function Sidebar() {
                         <span className="sidebarListItemTextUser">
                             {currentUser.name}
                         </span>
+                     
                     </li>
                     <li className="sidebarListItem">
                         <QuestionAnswer className="sidebarIcon"/>

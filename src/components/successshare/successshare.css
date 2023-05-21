@@ -1,39 +1,4 @@
-.success{
-    flex: 6;
-    background-color: rgb(248, 243, 243);
-}
-
-.successWrapper{
-    padding: 2px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .success{
-    background-color: rgb(248, 243, 243);
-    flex: 6;
-    
-} */
-
-/* .successContainer{
+.successContainer{
     display: flex;
     
     background-color: rgb(248, 243, 243);
@@ -93,10 +58,10 @@
 
 .shareOptionsSuccess{
     display: flex;
-    /* margin-left: 20px; /*was 120px*/
-/* } */
-/*  */
-/* .shareOptionSuccess{
+    margin-left: 20px; /*was 120px*/
+}
+
+.shareOptionSuccess{
     display: flex;
     align-items: center;
     margin-right: 35px;
@@ -106,9 +71,9 @@
 .shareIconSuccess{
     font-size: 18px;
     margin-right: 3px;
-} */ 
+}
 
-/* .shareOptionTextSuccess{
+.shareOptionTextSuccess{
     font-size: 14px;
     font-weight: 500;
 }
@@ -123,4 +88,4 @@
     margin-right: 20px;
     color: white;
 
-} */ 
+}
