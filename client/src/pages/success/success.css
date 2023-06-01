@@ -1,0 +1,126 @@
+.success{
+    flex: 6;
+    background-color: rgb(248, 243, 243);
+}
+
+.successWrapper{
+    padding: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .success{
+    background-color: rgb(248, 243, 243);
+    flex: 6;
+    
+} */
+
+/* .successContainer{
+    display: flex;
+    
+    background-color: rgb(248, 243, 243);
+    
+    flex: 6;
+}
+
+
+.shareSuccess{
+    width: 98%;
+    height: 170px;
+    border-radius: 10px;
+    margin-top: 20px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    background-color: white;
+    top: 250px;  
+    
+}
+
+.shareWrapperSuccess{
+    padding: 10px;
+}
+
+.shareTopSuccess{
+    display: flex;
+    align-items: center;
+    top: 250px;
+}
+
+.shareProfileImgSuccess{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.shareInputSuccess{
+    border: none;
+    width: 80%;
+}
+
+.shareInputSuccess:focus{
+    outline: none;
+}
+
+.shareHrSuccess{
+    margin: 20px;
+}
+
+.shareBottomSuccess{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shareOptionsSuccess{
+    display: flex;
+    /* margin-left: 20px; /*was 120px*/
+/* } */
+/*  */
+/* .shareOptionSuccess{
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+.shareIconSuccess{
+    font-size: 18px;
+    margin-right: 3px;
+} */ 
+
+/* .shareOptionTextSuccess{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.shareButtonSuccess{
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(18, 192, 245);
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 20px;
+    color: white;
+
+} */ 
