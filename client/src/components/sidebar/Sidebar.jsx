@@ -67,9 +67,11 @@ export default function Sidebar() {
                     </li>
                     <li className="sidebarListItem">
                         <LocalLibrary className="sidebarIcon"/>
+                        <Link to="/book" style={{textDecoration:"none"}}>
                         <span className="sidebarListItemText">
                             Books
                         </span>
+                        </Link>
                     </li>
                     <li className="sidebarListItem">
                         <Work className="sidebarIcon"/>

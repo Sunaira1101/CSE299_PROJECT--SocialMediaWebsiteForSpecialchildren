@@ -24,6 +24,7 @@ import Sideprofile from "./pages/sideprofile/Sideprofile";
 import Event from "./pages/event/Event";
 import Game from "./pages/game/Game";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Book from "./pages/book/Book";
 
 
 
@@ -98,6 +99,10 @@ function App() {
         {
           path: "/game",
           element: <Game/>,
+        },
+        {
+          path: "/book",
+          element: <Book/>,
         }
       ]
     },

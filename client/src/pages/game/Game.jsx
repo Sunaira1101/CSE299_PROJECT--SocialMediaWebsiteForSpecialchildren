@@ -5,7 +5,7 @@ const Game = () => {
     const [gamecards] = useState([
         {
             title: 'Parachute Games',
-            pic: 'https://o.remove.bg/downloads/bd5d69c3-1eb6-43a7-8194-e3313c375c64/41Tn14acXdL._SL250_-removebg-preview.png',
+            pic: 'https://o.remove.bg/downloads/b09e6bbe-18f4-43e2-b182-fc7a93132651/41Tn14acXdL._SL250_-removebg-preview.png',
             text: 'Specially designed parachutes can be bought in different sizes to play parachute games. Reinforced handles around the edge of the parachute make it easier for participants with poor grip or hand control to hold on to. Try these games with the children standing in a circle holding the parachute by the outside edges: 1. Making waves - An adult directs the children to make small or large waves by moving their arms up and down.  Slow to start then faster and then slow.  Introduce a story about the sea or the wind on a stormy night. 2.Rolling the ball - An adult places a ball on the parachute.  The children move the parachute up and down to stop the ball falling through the centre hole.  Vary it with different sized balls.'
         },
         {
@@ -29,6 +29,7 @@ const Game = () => {
       <section className="gsec">
         <div className="gamecontainer">
             <h1 className="gamename">Games For Your Child</h1>
+            <button className="addgame">Add Games</button>
             <div className="gamecards">
                 {
                     gamecards.map((gcard, i) => (
