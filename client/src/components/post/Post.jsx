@@ -97,7 +97,7 @@ const Post = ({post}) => {
         </div>
         <div className="reaction" onClick={()=> setCommentOpen(!commentOpen)}>
             <TextsmsIcon/>
-            2 comments 
+            {data?.length} comments 
         </div>
       </div>
       {commentOpen && <Comments postid={post.id}/>}

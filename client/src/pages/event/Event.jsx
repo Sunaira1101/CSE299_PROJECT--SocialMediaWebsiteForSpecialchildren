@@ -1,7 +1,11 @@
+import Explore from "../../components/explore/Explore";
 import "./event.css"
 import React, { useState } from 'react'
 
 const Event = () => {
+    
+    const [OpenExplore, setOpenExplore] = useState(false);
+    
     const [cards] = useState([
         {
             title: 'International Autism Day',
@@ -45,7 +49,7 @@ const Event = () => {
                             <h3 className="cardname">{card.title}</h3>
                             {/* <img className="piccard" src={card.pic} alt="" /> */}
                             <span className="ptext">{card.text}</span>
-                            <button className="cardbtn">Explore</button>
+                            <button onClick={()=>setOpenExplore(true)} className="cardbtn">Explore</button>
                         </div>
 
                     ))
@@ -55,6 +59,7 @@ const Event = () => {
 
         </div>
       </section>
+      {OpenExplore && <Explore setOpenExplore={setOpenExplore} opt={cards}/>}
     </div>
   )
 }
