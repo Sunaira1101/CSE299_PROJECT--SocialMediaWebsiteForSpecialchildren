@@ -21,8 +21,9 @@ import { AuthContext } from "./context/authContext";
 import Sidefeed from "./pages/sidefeed/Sidefeed";
 import Success from "./pages/success/Success";
 import Sideprofile from "./pages/sideprofile/Sideprofile";
+import Event from "./pages/event/Event";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-// import { useContext } from "react";
+
 
 
 function App() {
@@ -87,6 +88,10 @@ function App() {
         {
           path: "/sideprofile",
           element: <Sideprofile/>,
+        },
+        {
+          path: "/event",
+          element: <Event/>,
         }
       ]
     },

@@ -51,9 +51,11 @@ export default function Sidebar() {
                     </li>
                     <li className="sidebarListItem">
                         <CalendarMonth className="sidebarIcon"/>
+                        <Link to="/event" style={{textDecoration:"none"}}>
                         <span className="sidebarListItemText">
                             Events
                         </span>
+                        </Link>
                     </li>
                     <li className="sidebarListItem">
                         <SportsEsports className="sidebarIcon"/>
