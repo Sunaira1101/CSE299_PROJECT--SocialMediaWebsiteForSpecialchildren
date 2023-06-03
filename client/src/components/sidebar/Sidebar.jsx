@@ -45,9 +45,11 @@ export default function Sidebar() {
                     </li>
                     <li className="sidebarListItem">
                         <Mood className="sidebarIcon"/>
+                        <Link to="/moodone" style={{textDecoration:"none"}}>
                         <span className="sidebarListItemText">
                             Mood
                         </span>
+                        </Link>
                     </li>
                     <li className="sidebarListItem">
                         <CalendarMonth className="sidebarIcon"/>

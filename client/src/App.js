@@ -26,6 +26,7 @@ import Game from "./pages/game/Game";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Book from "./pages/book/Book";
 import Job from "./pages/job/Job";
+import Moodone from "./pages/moodone/Moodone";
 
 
 
@@ -108,6 +109,10 @@ function App() {
         {
           path: "/job",
           element: <Job/>,
+        },
+        {
+          path: "/moodone",
+          element: <Moodone/>,
         }
       ]
     },
