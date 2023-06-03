@@ -26,11 +26,13 @@ export default function Topbar() {
 
            <div className="topbarRight">
                 <div className="topbarLinks">
+                    <Link to="/" style={{textDecoration:"none", color: "white"}}>
                     <span className="topbarLink">Homepage</span>
+                    </Link>
                     {/* <span className="topbarLink">Timeline</span> */}
                 </div>
 
-                <div className="topbarIcons">
+                {/* <div className="topbarIcons">
                     <div className="topbarIconItem">
                         <Person/>
                         <span className="topbarIconBadge">1</span>
@@ -43,7 +45,7 @@ export default function Topbar() {
                         <Notifications/>
                         <span className="topbarIconBadge">1</span>
                     </div>
-                 </div>
+                 </div> */}
                  
                  <img src={"/upload/" + currentUser.profilePic} alt="" className="topbarImg" />
                  <span className="topbarName">{currentUser.name}</span>

@@ -29,12 +29,12 @@ export default function Sidebar() {
                         </span>
                         </Link>
                     </li>
-                    <li className="sidebarListItem">
+                    {/* <li className="sidebarListItem">
                         <Slideshow className="sidebarIcon"/>
                         <span className="sidebarListItemText">
                             Videos
                         </span>
-                    </li>
+                    </li> */}
                     <li className="sidebarListItem">
                         <AutoStories className="sidebarIcon"/>
                         <Link to="/success" style={{textDecoration:"none"}}>
@@ -75,9 +75,11 @@ export default function Sidebar() {
                     </li>
                     <li className="sidebarListItem">
                         <Work className="sidebarIcon"/>
+                        <Link to="/job" style={{textDecoration:"none"}}>
                         <span className="sidebarListItemText">
                             Job Openings
                         </span>
+                        </Link>
                     </li>
                     
                 </ul>
