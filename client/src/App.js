@@ -22,7 +22,9 @@ import Sidefeed from "./pages/sidefeed/Sidefeed";
 import Success from "./pages/success/Success";
 import Sideprofile from "./pages/sideprofile/Sideprofile";
 import Event from "./pages/event/Event";
+import Game from "./pages/game/Game";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 
 
 
@@ -92,6 +94,10 @@ function App() {
         {
           path: "/event",
           element: <Event/>,
+        },
+        {
+          path: "/game",
+          element: <Game/>,
         }
       ]
     },

@@ -59,9 +59,11 @@ export default function Sidebar() {
                     </li>
                     <li className="sidebarListItem">
                         <SportsEsports className="sidebarIcon"/>
+                        <Link to="/game" style={{textDecoration:"none"}}>
                         <span className="sidebarListItemText">
                             Games
                         </span>
+                        </Link>
                     </li>
                     <li className="sidebarListItem">
                         <LocalLibrary className="sidebarIcon"/>
