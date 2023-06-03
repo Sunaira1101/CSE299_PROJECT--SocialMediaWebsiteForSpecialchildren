@@ -45,7 +45,7 @@ export default function Topbar() {
                     </div>
                  </div>
                  
-                 <img src={currentUser.profilePic} alt="" className="topbarImg" />
+                 <img src={"/upload/" + currentUser.profilePic} alt="" className="topbarImg" />
                  <span className="topbarName">{currentUser.name}</span>
 
            </div>

@@ -1,12 +1,12 @@
-import Profile from "../profile/Profile";
-import "./sideprofile.css";
+// import Profile from "../profile/Profile";
+// import "./sideprofile.css";
 
-const Sideprofile = () => {
-    return (
-      <div className="sideprofileConatainer">
-        <Profile/>
-      </div>
-    )
-  }
+// const Sideprofile = () => {
+//     return (
+//       <div className="sideprofileConatainer">
+//         <Profile/>
+//       </div>
+//     )
+//   }
   
-  export default Sideprofile
+//   export default Sideprofile

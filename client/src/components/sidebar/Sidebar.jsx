@@ -13,7 +13,7 @@ export default function Sidebar() {
             <div className="sidebarWrapper">
                 <ul className="sidebarList">
                 <li className="sidebarListItem">
-                <img src={currentUser.profilePic} alt="" className="sidebarUserImg" />
+                <img src={"/upload/" + currentUser.profilePic} alt="" className="sidebarUserImg" />
                         <Link to ="/sideprofile" style={{textDecoration:"none"}}>
                         <span className="sidebarListItemTextUser">
                             {currentUser.name}

@@ -6,46 +6,101 @@ import TextsmsIcon from '@mui/icons-material/Textsms';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import Comments from "../comments/Comments";
 import { useState } from "react";
+import moment from "moment";
+import { useQuery, useQueryClient, useMutation} from '@tanstack/react-query';
+import { makeRequest } from "../../axios";
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 
 
 
 
 const Post = ({post}) => {
   
-  const [commentOpen, setCommentOpen] = useState(false)  
+  const [commentOpen, setCommentOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const { currentUser } = useContext(AuthContext);  
   
-  const liked = true;
+  const { isLoading, error, data } = useQuery(["likes", post.id], () =>
+    makeRequest.get("/likes?postid=" + post.id).then((res) => {
+      return res.data;
+    })
+  );
+  
+  // const liked = true;
+
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation(
+    (liked) => {
+      if (liked) return makeRequest.delete("/likes?postid=" + post.id);
+      return makeRequest.post("/likes", { postid: post.id });
+    },
+    {
+      onSuccess: () => {
+        // Invalidate and refetch
+        queryClient.invalidateQueries(["likes"]);
+      },
+    }
+  );
+
+  const deleteMutation = useMutation(
+    (postid) => {
+      return makeRequest.delete("/posts/" + postid);
+    },
+    {
+      onSuccess: () => {
+        // Invalidate and refetch
+        queryClient.invalidateQueries(["posts"]);
+      },
+    }
+  );
+
+  const handleLike = () => {
+    mutation.mutate(data.includes(currentUser.id));
+  };
+
+  const handleDelete = () => {
+    deleteMutation.mutate(post.id);
+  };
     
     return (
     <div className="post">
      <div className="container">
       <div className="user">
         <div className="userInfo">
-            <img className="profileImg" src={post.profilePic} alt="" />
+            <img className="profileImg" src={"/upload/"+post.profilePic} alt="" />
             <div className="details">
-                <Link to={`/profile/${post.userID}`} style={{textDecoration:"none", color:"inherit"}}>                
+                <Link to={`/profile/${post.userid}`} style={{textDecoration:"none", color:"inherit"}}>                
                     <span className="name">{post.name}</span>
                 </Link>
-                <span className="date">1 min ago</span>
+                <span className="date">{moment(post.createdate).fromNow()}</span>
             </div>
         </div>
-        <MoreHorizOutlinedIcon/>
+        <MoreHorizOutlinedIcon onClick={() => setMenuOpen(!menuOpen)}/>
+        {menuOpen && post.userid === currentUser.id && (
+            <button className="deleteButton" onClick={handleDelete}>delete</button>
+          )}
+
+
       </div>
       <div className="content">
         <p>{post.desc}</p>
-        <img className="postImg" src={post.img} alt="" />
+        <img className="postImg" src={"./upload/"+post.img} alt="" />
       </div>
       <div className="info">
         <div className="reaction">
-            {liked ? <FavoriteIcon htmlColor="tomato"/> : <FavoriteBorderIcon/>}
-            12 liked
+            {isLoading ? "loading" : data.includes(currentUser.id) ? <FavoriteIcon htmlColor="tomato" onClick={handleLike}/>
+             :  <FavoriteBorderIcon onClick={handleLike}/> }
+            {data?.length} Liked
         </div>
         <div className="reaction" onClick={()=> setCommentOpen(!commentOpen)}>
             <TextsmsIcon/>
             2 comments 
         </div>
       </div>
-      {commentOpen && <Comments/>}
+      {commentOpen && <Comments postid={post.id}/>}
      </div>
     </div>
   )
