@@ -1,12 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./topbar.css"
 import {Search, Person, Chat, Notifications} from '@mui/icons-material';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
 
 
 export default function Topbar() {
+    const [logOpen, setLogOpen] = useState(false);
+    const navigate = useNavigate();
+    
     const { currentUser } = useContext(AuthContext);
+
+    const handleLogout = () => {
+       navigate('/Login');
+      };
     
     return (
         <div className="topbarContainer">
@@ -48,7 +55,10 @@ export default function Topbar() {
                  </div> */}
                  
                  <img src={"/upload/" + currentUser.profilePic} alt="" className="topbarImg" />
-                 <span className="topbarName">{currentUser.name}</span>
+                 <span onClick={() => setLogOpen(!logOpen)} className="topbarName">{currentUser.name}</span>
+                 {logOpen && (
+            <button className="deleteLogButton" onClick={handleLogout} to="/Login">LogOut</button>
+          )}
 
            </div>
         

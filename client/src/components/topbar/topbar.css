@@ -113,4 +113,19 @@
     gap: 10px;
     font-weight: 500;
     margin-left: -15px;
+    cursor: pointer;
+}
+
+.deleteLogButton{
+    position: absolute;
+    width: 100px;
+    top: 30px;
+    right: 0;
+    border: none;
+    background-color: brown;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+    margin-top: 10px;
 }

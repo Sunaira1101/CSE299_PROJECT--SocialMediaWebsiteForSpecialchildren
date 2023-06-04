@@ -106,7 +106,7 @@ export default function Share() {
             <img className="shareProfileImg" src={"/upload/" + currentUser.profilePic} alt="" />
             <input className="shareInput"
               type="text"
-              placeholder={`What's on your mind ${currentUser.name}?`}
+              placeholder={`Write about your child today ${currentUser.name}...`}
               onChange={(e) => setDesc(e.target.value)}
               value={desc}
             />
@@ -136,10 +136,10 @@ export default function Share() {
               <img className="shareinsideimg" src="/assets/map.png" alt="" />
               <span className="shareinsidetext">Add Place</span>
             </div>
-            <div className="shareitem">
+            {/* <div className="shareitem">
               <img className="shareinsideimg" src="/assets/friend.png" alt="" />
               <span className="shareinsidetext">Tag Friends</span>
-            </div>
+            </div> */}
           </div>
           <div className="shareright">
             <button onClick={handleClick} className="sharebutton">Share</button>
