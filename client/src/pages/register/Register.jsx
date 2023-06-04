@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 import axios from "axios";
 
@@ -16,12 +16,15 @@ export default function Register() {
 
     const [err, setErr] = useState(null);
 
+    const navigate = useNavigate()
+
     const handleChange = (e) => {
         setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     };
 
     const handleClick = async (e) =>{
         e.preventDefault();
+        navigate("/Login");
         // setInputs('')
 
         try{
