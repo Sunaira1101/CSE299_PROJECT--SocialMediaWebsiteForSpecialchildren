@@ -1,0 +1,115 @@
+.mood{
+    background-color: rgb(248, 243, 243);
+    color: #111;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.moodcontainer{
+    max-width: 1300px;
+    width: 800px;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+.msec{
+    min-height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.moodname{
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.moods{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.moodcardcard{
+    /* flex: 0 0 calc(33.33% - 20px); */
+    /* max-width: calc(33.33% - 20px); */
+    width: 200px;
+    height: 240px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: .3s;
+    border: 2px solid transparent;
+    background-color: #ffcdf6;
+    align-items: center;
+    justify-content: center;
+}
+
+.moodcardcard:hover{
+    border-color: #1d39c4;
+}
+
+.moodcardname{
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    /* margin-right: px; */
+}
+
+.mpiccard{
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 24px;
+    
+}
+
+.moodptext{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-right: 30px;
+    color: rgb(41, 4, 4);
+    overflow: hidden;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    display: inline-block;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.moodcardbtn{
+    border: none;
+    outline: none;
+    background: #1d39c4;
+    color: #fff;
+    border-radius: 10px;
+    /* max-width: 120px; */
+    width: 100px;
+    height: 40px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* margin-right: -270px; */
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid #1d39c4;
+}
+
+.moodcardbtn:hover{
+    background: transparent;
+    color: #1d39c4;
+}
