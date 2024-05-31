@@ -1,4 +1,3 @@
-
 <h1 align="center"><b>Social Media Website For Special Children</b></h1>
 
 
